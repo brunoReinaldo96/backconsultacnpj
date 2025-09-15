@@ -12,29 +12,32 @@ Este projeto é uma API simples em **Node.js + Express** que permite consultar i
 
 Clone o repositório e instale as dependências:
 
-```bash
+bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 cd seu-repositorio
 npm install
 ▶️ Como executar
-
 Inicie o servidor com:
 
+bash
+Copiar código
 node index.js
-
 O servidor rodará em:
 
+arduino
+Copiar código
 http://localhost:4000
-
 🔎 Rotas disponíveis
 GET /cnpj/:cnpj
-
 Consulta informações de um CNPJ.
 
 Exemplo de requisição:
+bash
+Copiar código
 GET http://localhost:4000/cnpj/00000000000191
-
 Exemplo de resposta:
+json
+Copiar código
 {
   "razao_social": "EMPRESA EXEMPLO LTDA",
   "nome_fantasia": "EMPRESA EXEMPLO",
@@ -52,11 +55,22 @@ Exemplo de resposta:
   "atividade_principal": "Desenvolvimento de programas de computador sob encomenda",
   "atividades_secundarias": "62.09-1-00 - Suporte técnico, manutenção e outros serviços em TI"
 }
-
 ⚠️ Observações
-
 O ReceitaWS possui limite de requisições gratuitas por dia.
 
 Certifique-se de informar um CNPJ válido (14 dígitos).
 
 Caso o CNPJ não seja encontrado, a API retornará um erro.
+
+✍️ Desenvolvido para fins de estudo e prática com Node.js e APIs.
+
+go
+Copiar código
+
+Quer que eu prepare também um `package.json` pronto (com scripts `start` e `dev`) para deixar o projeto rodando mais fácil?
+
+
+
+
+
+
