@@ -1,54 +1,62 @@
-# 🔍 Consulta CNPJ - API Node.js
+# Consulta CNPJ API
 
-Este projeto é uma API simples desenvolvida com **Node.js** e **Express** que permite consultar informações de empresas brasileiras a partir do número do CNPJ, utilizando a [API pública da ReceitaWS](https://www.receitaws.com.br/).
+Este projeto é uma API simples em **Node.js + Express** que permite consultar informações de empresas a partir do **CNPJ**, utilizando a API pública da [ReceitaWS](https://www.receitaws.com.br/).
 
----
-
-## 🚀 Como funciona
-
-A API recebe um número de CNPJ via rota HTTP GET e retorna os dados formatados da empresa, como razão social, nome fantasia, endereço, contatos e atividades econômicas.
-
----
-
-## 📦 Tecnologias utilizadas
-
+## 🚀 Tecnologias utilizadas
 - [Node.js](https://nodejs.org/)
 - [Express](https://expressjs.com/)
 - [CORS](https://www.npmjs.com/package/cors)
 - [node-fetch](https://www.npmjs.com/package/node-fetch)
 
----
+## 📦 Instalação
 
-## 📄 Instalação
+Clone o repositório e instale as dependências:
 
-1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+npm install
+▶️ Como executar
 
-   ```bash
-   git clone https://github.com/brunoReinaldo96/backconsultacnpj.git
-   cd backconsultacnpj
+Inicie o servidor com:
 
-Claro, Reinaldo! Aqui está um modelo de  bem estruturado para o seu projeto de consulta de CNPJ via API da ReceitaWS:
+node index.js
 
+O servidor rodará em:
 
-2. 	Instale as dependências:
+http://localhost:4000
 
-3. 	Inicie o servidor:
+🔎 Rotas disponíveis
+GET /cnpj/:cnpj
 
-3. 	O servidor será iniciado em 
+Consulta informações de um CNPJ.
 
-🔗 Endpoint
+Exemplo de requisição:
+GET http://localhost:4000/cnpj/00000000000191
 
-Consulta os dados de uma empresa pelo CNPJ.
-Exemplo:
-
-Resposta:
-
+Exemplo de resposta:
+{
+  "razao_social": "EMPRESA EXEMPLO LTDA",
+  "nome_fantasia": "EMPRESA EXEMPLO",
+  "cnpj": "00.000.000/0001-91",
+  "inscricao_estadual": "123456789",
+  "logradouro": "Rua Exemplo",
+  "numero": "100",
+  "bairro": "Centro",
+  "municipio": "São Paulo",
+  "uf": "SP",
+  "cep": "01000-000",
+  "telefone": "(11) 1234-5678",
+  "email": "contato@empresa.com",
+  "cnae_principal": "62.01-1-00",
+  "atividade_principal": "Desenvolvimento de programas de computador sob encomenda",
+  "atividades_secundarias": "62.09-1-00 - Suporte técnico, manutenção e outros serviços em TI"
+}
 
 ⚠️ Observações
-• 	A API da ReceitaWS possui limites de requisição por IP.
-• 	Certifique-se de que o CNPJ enviado possui 14 dígitos numéricos.
-• 	Em caso de erro, a API retorna mensagens claras como ,  ou .
 
-🧑‍💻 Autor
-Bruno Reinaldo
-GitHub: @brunoReinaldo96
+O ReceitaWS possui limite de requisições gratuitas por dia.
+
+Certifique-se de informar um CNPJ válido (14 dígitos).
+
+Caso o CNPJ não seja encontrado, a API retornará um erro.
