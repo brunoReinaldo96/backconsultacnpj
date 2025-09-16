@@ -12,7 +12,7 @@ Este projeto é uma API simples em Node.js + Express que permite consultar infor
 
 Clone o repositório e instale as dependências:
 
-git clone https://github.com/seu-usuario/seu-repositorio.git ](https://github.com/brunoReinaldo96/backconsultacnpj.git 
+git clone https://github.com/brunoReinaldo96/backconsultacnpj.git 
 cd seu-repositorio  
 npm install  
 
